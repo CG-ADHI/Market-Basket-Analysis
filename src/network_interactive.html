@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Bananas", "label": "Bananas", "shape": "dot", "size": 22.0, "title": "Bananas\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Apples", "label": "Apples", "shape": "dot", "size": 22.0, "title": "Apples\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Yogurt", "label": "Yogurt", "shape": "dot", "size": 22.0, "title": "Yogurt\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Granola", "label": "Granola", "shape": "dot", "size": 22.0, "title": "Granola\u003cbr\u003eSupport: 0.060"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Conditioner", "label": "Conditioner", "shape": "dot", "size": 30.0, "title": "Conditioner\u003cbr\u003eSupport: 0.100"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Body Wash", "label": "Body Wash", "shape": "dot", "size": 22.0, "title": "Body Wash\u003cbr\u003eSupport: 0.060"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Shampoo", "label": "Shampoo", "shape": "dot", "size": 30.0, "title": "Shampoo\u003cbr\u003eSupport: 0.100"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Cheese", "label": "Cheese", "shape": "dot", "size": 26.0, "title": "Cheese\u003cbr\u003eSupport: 0.080"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Ground Beef", "label": "Ground Beef", "shape": "dot", "size": 18.0, "title": "Ground Beef\u003cbr\u003eSupport: 0.040"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Tomato Sauce", "label": "Tomato Sauce", "shape": "dot", "size": 30.0, "title": "Tomato Sauce\u003cbr\u003eSupport: 0.100"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Pasta", "label": "Pasta", "shape": "dot", "size": 30.0, "title": "Pasta\u003cbr\u003eSupport: 0.100"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Sauce", "label": "Sauce", "shape": "dot", "size": 22.0, "title": "Sauce\u003cbr\u003eSupport: 0.060"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Chicken", "label": "Chicken", "shape": "dot", "size": 30.0, "title": "Chicken\u003cbr\u003eSupport: 0.100"}, {"color": "#fee08b", "font": {"color": "#333333"}, "id": "Rice", "label": "Rice", "shape": "dot", "size": 30.0, "title": "Rice\u003cbr\u003eSupport: 0.100"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Vegetables", "label": "Vegetables", "shape": "dot", "size": 22.0, "title": "Vegetables\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Milk", "label": "Milk", "shape": "dot", "size": 22.0, "title": "Milk\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Cereal", "label": "Cereal", "shape": "dot", "size": 22.0, "title": "Cereal\u003cbr\u003eSupport: 0.060"}, {"color": "#e0f3f8", "font": {"color": "#333333"}, "id": "Toothpaste", "label": "Toothpaste", "shape": "dot", "size": 22.0, "title": "Toothpaste\u003cbr\u003eSupport: 0.060"}]);
+                  edges = new vis.DataSet([{"arrows": "", "color": "#d73027", "from": "Bananas", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Yogurt", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Bananas", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Apples", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Bananas", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Granola", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Bananas", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Cereal", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Apples", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Yogurt", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Apples", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Granola", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Conditioner", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Body Wash", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Conditioner", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.100", "to": "Shampoo", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Conditioner", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Toothpaste", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Body Wash", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Shampoo", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Shampoo", "title": "Lift: 10.00\u003cbr\u003eConfidence: 0.60\u003cbr\u003eSupport: 0.060", "to": "Toothpaste", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Cheese", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.020", "to": "Tomato Sauce", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Cheese", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.080", "to": "Pasta", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Ground Beef", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.020", "to": "Tomato Sauce", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Ground Beef", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.040", "to": "Pasta", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Tomato Sauce", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.040", "to": "Pasta", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Sauce", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Chicken", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Sauce", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Rice", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Chicken", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Rice", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Chicken", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.020", "to": "Vegetables", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Rice", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.020", "to": "Vegetables", "width": 5.0}, {"arrows": "", "color": "#d73027", "from": "Milk", "title": "Lift: 10.00\u003cbr\u003eConfidence: 1.00\u003cbr\u003eSupport: 0.060", "to": "Cereal", "width": 5.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.3,
+            "damping": 0.09,
+            "gravitationalConstant": -8000,
+            "springConstant": 0.001,
+            "springLength": 200
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

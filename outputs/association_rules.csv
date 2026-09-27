@@ -1,0 +1,187 @@
+Antecedent (If),Consequent (Then),Support,Confidence,Lift,Leverage,Conviction
+"Bananas, Apples",Yogurt,0.06,0.6,10.0,0.054,2.3499999999999996
+"Bananas, Yogurt",Apples,0.06,1.0,10.0,0.054,inf
+Apples,Granola,0.06,0.6,10.0,0.054,2.3499999999999996
+Granola,Apples,0.06,1.0,10.0,0.054,inf
+Apples,"Bananas, Yogurt",0.06,0.6,10.0,0.054,2.3499999999999996
+Yogurt,"Bananas, Apples",0.06,1.0,10.0,0.054,inf
+Apples,"Bananas, Granola",0.06,0.6,10.0,0.054,2.3499999999999996
+Granola,"Bananas, Apples",0.06,1.0,10.0,0.054,inf
+"Bananas, Granola",Apples,0.06,1.0,10.0,0.054,inf
+"Bananas, Apples",Granola,0.06,0.6,10.0,0.054,2.3499999999999996
+Conditioner,Body Wash,0.06,0.6,10.0,0.054,2.3499999999999996
+Body Wash,Conditioner,0.06,1.0,10.0,0.054,inf
+Shampoo,Body Wash,0.06,0.6,10.0,0.054,2.3499999999999996
+Conditioner,Shampoo,0.1,1.0,10.0,0.09,inf
+"Yogurt, Granola",Apples,0.02,1.0,10.0,0.018000000000000002,inf
+Shampoo,Conditioner,0.1,1.0,10.0,0.09,inf
+"Cheese, Ground Beef",Tomato Sauce,0.02,1.0,10.0,0.018000000000000002,inf
+"Pasta, Ground Beef",Tomato Sauce,0.04,1.0,10.0,0.036000000000000004,inf
+Ground Beef,Pasta,0.04,1.0,10.0,0.036000000000000004,inf
+Ground Beef,Tomato Sauce,0.04,1.0,10.0,0.036000000000000004,inf
+"Ground Beef, Tomato Sauce",Pasta,0.04,1.0,10.0,0.036000000000000004,inf
+Cheese,"Pasta, Tomato Sauce",0.08,1.0,10.0,0.07200000000000001,inf
+"Cheese, Pasta",Tomato Sauce,0.08,1.0,10.0,0.07200000000000001,inf
+"Cheese, Tomato Sauce",Pasta,0.08,1.0,10.0,0.07200000000000001,inf
+Cheese,Pasta,0.08,1.0,10.0,0.07200000000000001,inf
+Ground Beef,"Pasta, Tomato Sauce",0.04,1.0,10.0,0.036000000000000004,inf
+Sauce,Chicken,0.06,1.0,10.0,0.054,inf
+Sauce,Rice,0.06,1.0,10.0,0.054,inf
+Rice,Sauce,0.06,0.6,10.0,0.054,2.3499999999999996
+"Chicken, Sauce",Rice,0.06,1.0,10.0,0.054,inf
+"Chicken, Rice",Sauce,0.06,0.6,10.0,0.054,2.3499999999999996
+"Sauce, Rice",Chicken,0.06,1.0,10.0,0.054,inf
+Chicken,"Sauce, Rice",0.06,0.6,10.0,0.054,2.3499999999999996
+Sauce,"Chicken, Rice",0.06,1.0,10.0,0.054,inf
+Rice,"Chicken, Sauce",0.06,0.6,10.0,0.054,2.3499999999999996
+"Vegetables, Sauce",Chicken,0.02,1.0,10.0,0.018000000000000002,inf
+"Vegetables, Sauce",Rice,0.02,1.0,10.0,0.018000000000000002,inf
+"Chicken, Vegetables, Sauce",Rice,0.02,1.0,10.0,0.018000000000000002,inf
+"Vegetables, Sauce, Rice",Chicken,0.02,1.0,10.0,0.018000000000000002,inf
+"Vegetables, Sauce","Chicken, Rice",0.02,1.0,10.0,0.018000000000000002,inf
+Pasta,Tomato Sauce,0.1,1.0,10.0,0.09,inf
+Tomato Sauce,Pasta,0.1,1.0,10.0,0.09,inf
+Cheese,Tomato Sauce,0.08,1.0,10.0,0.07200000000000001,inf
+Chicken,Rice,0.1,1.0,10.0,0.09,inf
+Chicken,Vegetables,0.06,0.6,10.0,0.054,2.3499999999999996
+Rice,Chicken,0.1,1.0,10.0,0.09,inf
+Vegetables,Rice,0.06,1.0,10.0,0.054,inf
+Vegetables,Chicken,0.06,1.0,10.0,0.054,inf
+"Chicken, Vegetables",Rice,0.06,1.0,10.0,0.054,inf
+Rice,Vegetables,0.06,0.6,10.0,0.054,2.3499999999999996
+Chicken,"Vegetables, Rice",0.06,0.6,10.0,0.054,2.3499999999999996
+Vegetables,"Chicken, Rice",0.06,1.0,10.0,0.054,inf
+Rice,"Chicken, Vegetables",0.06,0.6,10.0,0.054,2.3499999999999996
+"Vegetables, Rice",Chicken,0.06,1.0,10.0,0.054,inf
+Chicken,Sauce,0.06,0.6,10.0,0.054,2.3499999999999996
+"Chicken, Rice",Vegetables,0.06,0.6,10.0,0.054,2.3499999999999996
+"Bananas, Milk",Cereal,0.06,1.0,10.0,0.054,inf
+Cereal,"Bananas, Milk",0.06,0.6,10.0,0.054,2.3499999999999996
+"Shampoo, Conditioner",Toothpaste,0.06,0.6,10.0,0.054,2.3499999999999996
+"Shampoo, Toothpaste",Conditioner,0.06,1.0,10.0,0.054,inf
+"Conditioner, Toothpaste",Shampoo,0.06,1.0,10.0,0.054,inf
+Shampoo,"Conditioner, Toothpaste",0.06,0.6,10.0,0.054,2.3499999999999996
+Conditioner,"Shampoo, Toothpaste",0.06,0.6,10.0,0.054,2.3499999999999996
+Toothpaste,"Shampoo, Conditioner",0.06,1.0,10.0,0.054,inf
+Shampoo,Toothpaste,0.06,0.6,10.0,0.054,2.3499999999999996
+Toothpaste,Shampoo,0.06,1.0,10.0,0.054,inf
+"Body Wash, Toothpaste",Shampoo,0.02,1.0,10.0,0.018000000000000002,inf
+"Shampoo, Body Wash, Toothpaste",Conditioner,0.02,1.0,10.0,0.018000000000000002,inf
+"Body Wash, Conditioner, Toothpaste",Shampoo,0.02,1.0,10.0,0.018000000000000002,inf
+"Body Wash, Toothpaste","Shampoo, Conditioner",0.02,1.0,10.0,0.018000000000000002,inf
+Conditioner,Toothpaste,0.06,0.6,10.0,0.054,2.3499999999999996
+Toothpaste,Conditioner,0.06,1.0,10.0,0.054,inf
+"Shampoo, Body Wash",Conditioner,0.06,1.0,10.0,0.054,inf
+Body Wash,Shampoo,0.06,1.0,10.0,0.054,inf
+"Body Wash, Toothpaste",Conditioner,0.02,1.0,10.0,0.018000000000000002,inf
+Conditioner,"Shampoo, Body Wash",0.06,0.6,10.0,0.054,2.3499999999999996
+Body Wash,"Shampoo, Conditioner",0.06,1.0,10.0,0.054,inf
+Shampoo,"Body Wash, Conditioner",0.06,0.6,10.0,0.054,2.3499999999999996
+"Body Wash, Conditioner",Shampoo,0.06,1.0,10.0,0.054,inf
+"Shampoo, Conditioner",Body Wash,0.06,0.6,10.0,0.054,2.3499999999999996
+"Yogurt, Granola","Bananas, Apples",0.02,1.0,10.0,0.018000000000000002,inf
+"Bananas, Yogurt, Granola",Apples,0.02,1.0,10.0,0.018000000000000002,inf
+"Cheese, Ground Beef","Pasta, Tomato Sauce",0.02,1.0,10.0,0.018000000000000002,inf
+"Cheese, Ground Beef, Tomato Sauce",Pasta,0.02,1.0,10.0,0.018000000000000002,inf
+Yogurt,Apples,0.06,1.0,10.0,0.054,inf
+Apples,Yogurt,0.06,0.6,10.0,0.054,2.3499999999999996
+"Cheese, Pasta, Ground Beef",Tomato Sauce,0.02,1.0,10.0,0.018000000000000002,inf
+"Cheese, Ground Beef",Pasta,0.02,1.0,10.0,0.018000000000000002,inf
+Tomato Sauce,Cheese,0.08,0.7999999999999999,9.999999999999998,0.07200000000000001,4.599999999999999
+Tomato Sauce,"Cheese, Pasta",0.08,0.7999999999999999,9.999999999999998,0.07200000000000001,4.599999999999999
+"Pasta, Tomato Sauce",Cheese,0.08,0.7999999999999999,9.999999999999998,0.07200000000000001,4.599999999999999
+Pasta,"Cheese, Tomato Sauce",0.08,0.7999999999999999,9.999999999999998,0.07200000000000001,4.599999999999999
+Pasta,Cheese,0.08,0.7999999999999999,9.999999999999998,0.07200000000000001,4.599999999999999
+Salsa,"Chips, Beer",0.04,1.0,8.333333333333334,0.0352,inf
+"Diapers, Beer, Salsa",Chips,0.02,1.0,8.333333333333334,0.0176,inf
+"Cereal, Bread, Milk",Eggs,0.02,1.0,8.333333333333334,0.0176,inf
+Salsa,Chips,0.04,1.0,8.333333333333334,0.0352,inf
+"Beer, Salsa",Chips,0.04,1.0,8.333333333333334,0.0352,inf
+Peanut Butter,"Jam, Bread",0.06,1.0,8.333333333333334,0.0528,inf
+"Bread, Peanut Butter",Jam,0.06,1.0,8.333333333333334,0.0528,inf
+"Diapers, Salsa",Chips,0.02,1.0,8.333333333333334,0.0176,inf
+"Diapers, Salsa","Chips, Beer",0.02,1.0,8.333333333333334,0.0176,inf
+"Peanut Butter, Butter","Jam, Bread",0.02,1.0,8.333333333333334,0.0176,inf
+"Peanut Butter, Bread, Butter",Jam,0.02,1.0,8.333333333333334,0.0176,inf
+"Cereal, Bread","Eggs, Milk",0.02,1.0,8.333333333333334,0.0176,inf
+"Cereal, Bread",Eggs,0.02,1.0,8.333333333333334,0.0176,inf
+"Sugar, Cream",Coffee,0.06,1.0,8.333333333333334,0.0528,inf
+Cream,"Sugar, Coffee",0.06,1.0,8.333333333333334,0.0528,inf
+"Cream, Milk",Coffee,0.02,1.0,8.333333333333334,0.0176,inf
+Cream,Coffee,0.06,1.0,8.333333333333334,0.0528,inf
+Peanut Butter,Jam,0.06,1.0,8.333333333333334,0.0528,inf
+"Butter, Peanut Butter",Jam,0.02,1.0,8.333333333333334,0.0176,inf
+"Cream, Milk","Sugar, Coffee",0.02,1.0,8.333333333333334,0.0176,inf
+"Sugar, Cream, Milk",Coffee,0.02,1.0,8.333333333333334,0.0176,inf
+Chips,Beer,0.12,1.0,7.142857142857142,0.10319999999999999,inf
+Eggs,"Bread, Milk",0.12,1.0,7.142857142857142,0.10319999999999999,inf
+"Cream, Milk, Coffee",Sugar,0.02,1.0,7.142857142857142,0.0172,inf
+"Cream, Milk",Sugar,0.02,1.0,7.142857142857142,0.0172,inf
+Coffee,Sugar,0.12,1.0,7.142857142857142,0.10319999999999999,inf
+"Cream, Coffee",Sugar,0.06,1.0,7.142857142857142,0.05159999999999999,inf
+Cream,Sugar,0.06,1.0,7.142857142857142,0.05159999999999999,inf
+"Milk, Coffee",Sugar,0.08,1.0,7.142857142857142,0.0688,inf
+Salsa,Beer,0.04,1.0,7.142857142857142,0.0344,inf
+"Chips, Salsa",Beer,0.04,1.0,7.142857142857142,0.0344,inf
+"Chips, Diapers, Salsa",Beer,0.02,1.0,7.142857142857142,0.0172,inf
+"Cereal, Eggs","Bread, Milk",0.02,1.0,7.142857142857142,0.0172,inf
+"Chips, Diapers",Beer,0.08,1.0,7.142857142857142,0.0688,inf
+"Eggs, Butter","Bread, Milk",0.06,1.0,7.142857142857142,0.05159999999999999,inf
+Beer,Diapers,0.1,0.7142857142857143,7.142857142857142,0.08600000000000001,3.1500000000000004
+Diapers,Beer,0.1,1.0,7.142857142857142,0.08600000000000001,inf
+"Diapers, Salsa",Beer,0.02,1.0,7.142857142857142,0.0172,inf
+Sugar,Coffee,0.12,0.857142857142857,7.1428571428571415,0.10319999999999999,6.159999999999993
+"Bread, Milk",Eggs,0.12,0.857142857142857,7.1428571428571415,0.10319999999999999,6.159999999999993
+Beer,Chips,0.12,0.857142857142857,7.1428571428571415,0.10319999999999999,6.159999999999993
+Chips,Diapers,0.08,0.6666666666666667,6.666666666666667,0.068,2.7000000000000006
+Coffee,"Sugar, Milk",0.08,0.6666666666666667,6.666666666666667,0.068,2.7000000000000006
+Chips,"Diapers, Beer",0.08,0.6666666666666667,6.666666666666667,0.068,2.7000000000000006
+"Chips, Beer",Diapers,0.08,0.6666666666666667,6.666666666666667,0.068,2.7000000000000006
+Diapers,"Chips, Beer",0.08,0.7999999999999999,6.666666666666666,0.068,4.399999999999999
+"Diapers, Beer",Chips,0.08,0.7999999999999999,6.666666666666666,0.068,4.399999999999999
+Diapers,Chips,0.08,0.7999999999999999,6.666666666666666,0.068,4.399999999999999
+"Sugar, Milk",Coffee,0.08,0.7999999999999999,6.666666666666666,0.068,4.399999999999999
+Bananas,Apples,0.1,0.625,6.25,0.084,2.4
+"Yogurt, Apples, Granola",Bananas,0.02,1.0,6.25,0.0168,inf
+"Milk, Butter","Eggs, Bread",0.06,0.75,6.25,0.0504,3.52
+"Milk, Butter",Eggs,0.06,0.75,6.25,0.0504,3.52
+"Bread, Milk, Butter",Eggs,0.06,0.75,6.25,0.0504,3.52
+Apples,Bananas,0.1,1.0,6.25,0.084,inf
+"Yogurt, Apples",Bananas,0.06,1.0,6.25,0.0504,inf
+"Yogurt, Granola",Bananas,0.02,1.0,6.25,0.0168,inf
+Yogurt,Bananas,0.06,1.0,6.25,0.0504,inf
+Granola,Bananas,0.06,1.0,6.25,0.0504,inf
+"Apples, Granola",Bananas,0.06,1.0,6.25,0.0504,inf
+"Jam, Bread",Butter,0.08,0.6666666666666667,4.166666666666667,0.06080000000000001,2.5200000000000005
+Jam,"Bread, Butter",0.08,0.6666666666666667,4.166666666666667,0.06080000000000001,2.5200000000000005
+Jam,Butter,0.08,0.6666666666666667,4.166666666666667,0.06080000000000001,2.5200000000000005
+Bread,Butter,0.16,0.6153846153846154,3.8461538461538463,0.1184,2.184
+"Milk, Butter",Bread,0.08,1.0,3.846153846153846,0.0592,inf
+Butter,Bread,0.16,1.0,3.846153846153846,0.1184,inf
+"Cereal, Eggs",Bread,0.02,1.0,3.846153846153846,0.0148,inf
+"Jam, Peanut Butter, Butter",Bread,0.02,1.0,3.846153846153846,0.0148,inf
+"Peanut Butter, Butter",Bread,0.02,1.0,3.846153846153846,0.0148,inf
+Eggs,Bread,0.12,1.0,3.846153846153846,0.08879999999999999,inf
+"Eggs, Milk, Butter",Bread,0.06,1.0,3.846153846153846,0.044399999999999995,inf
+"Eggs, Butter",Bread,0.06,1.0,3.846153846153846,0.044399999999999995,inf
+"Eggs, Milk",Bread,0.12,1.0,3.846153846153846,0.08879999999999999,inf
+Jam,Bread,0.12,1.0,3.846153846153846,0.08879999999999999,inf
+"Jam, Peanut Butter",Bread,0.06,1.0,3.846153846153846,0.044399999999999995,inf
+Peanut Butter,Bread,0.06,1.0,3.846153846153846,0.044399999999999995,inf
+"Jam, Butter",Bread,0.08,1.0,3.846153846153846,0.0592,inf
+"Cereal, Eggs, Milk",Bread,0.02,1.0,3.846153846153846,0.0148,inf
+"Cereal, Milk",Bananas,0.06,0.6,3.75,0.044,2.0999999999999996
+Cereal,Bananas,0.06,0.6,3.75,0.044,2.0999999999999996
+"Cereal, Sugar",Milk,0.02,1.0,3.3333333333333335,0.014,inf
+Eggs,Milk,0.12,1.0,3.3333333333333335,0.08399999999999999,inf
+"Eggs, Bread",Milk,0.12,1.0,3.3333333333333335,0.08399999999999999,inf
+"Eggs, Butter",Milk,0.06,1.0,3.3333333333333335,0.041999999999999996,inf
+"Eggs, Bread, Butter",Milk,0.06,1.0,3.3333333333333335,0.041999999999999996,inf
+"Cereal, Eggs",Milk,0.02,1.0,3.3333333333333335,0.014,inf
+"Cereal, Bananas",Milk,0.06,1.0,3.3333333333333335,0.041999999999999996,inf
+"Cereal, Eggs, Bread",Milk,0.02,1.0,3.3333333333333335,0.014,inf
+Cereal,Milk,0.1,1.0,3.3333333333333335,0.07,inf
+"Cereal, Bread",Milk,0.02,1.0,3.3333333333333335,0.014,inf
+Sugar,Milk,0.1,0.7142857142857143,2.380952380952381,0.058,2.45
+"Sugar, Coffee",Milk,0.08,0.6666666666666667,2.2222222222222228,0.044000000000000004,2.1000000000000005
+Coffee,Milk,0.08,0.6666666666666667,2.2222222222222228,0.044000000000000004,2.1000000000000005

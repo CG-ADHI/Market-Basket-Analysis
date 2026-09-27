@@ -1,0 +1,8 @@
+pandas
+numpy
+mlxtend
+networkx
+matplotlib
+pyvis
+fpdf2
+flask
